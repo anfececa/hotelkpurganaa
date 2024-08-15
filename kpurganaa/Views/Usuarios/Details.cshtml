@@ -1,0 +1,46 @@
+﻿@model kpurganaa.Models.Usuario
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div class="vh-100 d-flex justify-content-center" style="background-image: url(/img/6f38d4573ea286a2.png);background-size:cover">
+    <div class="card  border-0" style="max-width: 50%; margin-top:3.5cm; max-height:45%;background-image: url(/img/descarga.png);background-size:cover">
+        <div class="card-header text-center" style="background-color:burlywood">
+            <h1>DETALLES</h1>
+            <h4>USUARIO</h4>
+        </div>        
+        <dl class="row card-body m-auto" style="background-color:lightgoldenrodyellow;">
+            <dt class="col-sm-6">
+                @Html.DisplayNameFor(model => model.CorreoUsuario)
+            </dt>
+            <dd class="col-sm-6">
+                @Html.DisplayFor(model => model.CorreoUsuario)
+            </dd>
+            <dt class="col-sm-6">
+                @Html.DisplayNameFor(model => model.ClaveUsuario)
+            </dt>
+            <dd class="col-sm-6">
+                @Html.DisplayFor(model => model.ClaveUsuario)
+            </dd>
+            <dt class="col-sm-6">
+                @Html.DisplayNameFor(model => model.IdPersonasNavigation)
+            </dt>
+            <dd class="col-sm-6">
+                @Html.DisplayFor(model => model.IdPersonasNavigation.IdPersonas)
+            </dd>
+            <dt class="col-sm-6">
+                @Html.DisplayNameFor(model => model.IdRolNavigation)
+            </dt>
+            <dd class="col-sm-6">
+                @Html.DisplayFor(model => model.IdRolNavigation.IdRol)
+            </dd>
+        </dl>
+        <div class="card-footer text-center " style="background-color:burlywood;">
+            <a asp-action="Edit" asp-route-id="@Model?.IdUsuario" class="bi bi-pen btn-warning btn btn-primary btn-sm "></a>
+            <a asp-action="Index" class="bi bi-arrow-bar-left btn-danger btn btn-primary text-black btn-sm"></a>
+        </div>
+    </div>
+</div>
+
+
+

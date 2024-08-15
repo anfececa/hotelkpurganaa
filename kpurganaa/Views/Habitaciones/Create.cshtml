@@ -1,0 +1,51 @@
+﻿@model kpurganaa.Models.Habitacione
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="vh-100 d-flex justify-content-center" style="background-image: url(/img/6f38d4573ea286a2.png);background-size:cover">
+    <div class="card  border-0" style="max-width: 50%; margin-top:2cm; max-height:45%;background-image: url(/img/descarga.png);background-size:cover">
+        <div class="card-header text-center" style="background-color:burlywood">
+            <h1>Crear</h1>
+            <h4>Usuario</h4>
+        </div>  
+        <form asp-action="Create" class="row card-body m-auto" style="background-color:lightgoldenrodyellow;">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NorHabitacion" class="control-label"></label>
+                <input asp-for="NorHabitacion" class="form-control" />
+                <span asp-validation-for="NorHabitacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descripcion" class="control-label"></label>
+                <input asp-for="Descripcion" class="form-control" />
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EstadoHabitacion" class="control-label"></label>
+                <input asp-for="EstadoHabitacion" class="form-control" />
+                <span asp-validation-for="EstadoHabitacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrecioHabitacion" class="control-label"></label>
+                <input asp-for="PrecioHabitacion" class="form-control" />
+                <span asp-validation-for="PrecioHabitacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdTipoHabitacion" class="control-label"></label>
+                <select asp-for="IdTipoHabitacion" class ="form-control" asp-items="ViewBag.IdTipoHabitacion"></select>
+            </div>
+            <div class ="card-footer text-center " style="background-color:lightgoldenrodyellow;">
+                <input type="submit" value="Create" class="bi bi-file-plus btn btn-success btn-sm" />
+                <a href="https://localhost:44352/habitaciones" class="bi bi-arrow-bar-left btn-danger btn  text-black btn-sm"></a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

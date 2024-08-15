@@ -1,0 +1,45 @@
+﻿@model kpurganaa.Models.Usuario
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="vh-100 d-flex justify-content-center" style="background-image: url(/img/6f38d4573ea286a2.png);background-size:cover">
+    <div class="card  border-0" style="max-width: 50%; margin-top:3.5cm; max-height:45%;background-image: url(/img/descarga.png);background-size:cover">
+        <div class ="card-header text-center" style="background-color:burlywood">
+            <h1>Crear</h1>
+            <h4>Usuario</h4>
+        </div>
+        <form asp-action="Create" class="row card-body m-auto" style="background-color:lightgoldenrodyellow;">
+            <div asp-validation-summary="ModelOnly" class="text-danger "></div>
+            <div class="form-group">
+                <label asp-for="CorreoUsuario" class="control-label visually-hidden"></label>
+                <input asp-for="CorreoUsuario" class="form-control" placeholder="CorreoUsuario" />
+                <span asp-validation-for="CorreoUsuario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClaveUsuario" class="control-label visually-hidden"></label>
+                <input asp-for="ClaveUsuario" class="form-control mt-3" type="password" placeholder="ClaveUsuario" />
+                <span asp-validation-for="ClaveUsuario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdPersonas" class="control-label visually-hidden"></label>
+                <select asp-for="IdPersonas" class="form-control visually-hidden" asp-items="ViewBag.IdPersonas"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdRol" class="control-label visually-hidden" style=""></label>
+                <select asp-for="IdRol" class="form-control visually-hidden" asp-items="ViewBag.IdRol"></select>
+            </div>
+            <div class="card-footer text-center " style="background-color:lightgoldenrodyellow;">
+                <input type="submit" value="Create" class="bi bi-file-plus btn btn-success btn-sm" />
+                <a href="https://localhost:44352/Usuarios" class="bi bi-arrow-bar-left btn-danger btn  text-black btn-sm"></a>
+            </div>
+        </form>
+    </div>
+ </div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

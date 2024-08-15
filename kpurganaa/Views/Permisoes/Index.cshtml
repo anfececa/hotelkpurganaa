@@ -1,0 +1,45 @@
+﻿@model IEnumerable<kpurganaa.Models.Permiso>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="vh-100">
+    <div>
+        <h1 class="text-center">Index</h1>
+        <p class="text-center">
+            <a asp-action="Create" class="bi bi-file-plus btn btn-success">Create New</a>
+        </p>
+    </div>
+    <table class="table table-striped table-sm table-hover">
+        <thead class=" table-dark">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.NombrePermiso)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EstadoPermisos)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody class="table">
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NombrePermiso)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EstadoPermisos)
+                </td>
+                <td>
+                    <div>
+                        <a asp-action="Edit" asp-route-id="@item.IdPermisos" class="bi bi-pen  btn btn-primary btn-warning text-black8"></a>
+                        <a asp-action="Details" asp-route-id="@item.IdPermisos" class="bi bi-file-earmark-zip  btn btn-primary text-black"></a>
+                        <a asp-action="Delete" asp-route-id="@item.IdPermisos" class="bi bi-archive  btn btn-danger text-black"></a>
+                    </div>    
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
+</div>
