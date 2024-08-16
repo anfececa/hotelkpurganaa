@@ -169,5 +169,43 @@ namespace kpurganaa.Controllers
         {
           return (_context.Usuarios?.Any(e => e.IdUsuario == id)).GetValueOrDefault();
         }
+
+        // GET: Usuarios/IniciarSesion
+        public IActionResult IniciarSesion()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> IniciarSesion(Usuario usuario)
+        {
+            if (ModelState.IsValid)
+            {
+                // Busca el usuario con el correo y contraseña proporcionados
+                var user = await _context.Usuarios
+                    .FirstOrDefaultAsync(u => u.CorreoUsuario == usuario.CorreoUsuario && u.ClaveUsuario == usuario.ClaveUsuario);
+
+                if (user != null)
+                {
+                    // Si se encuentra el usuario, se puede establecer una sesión aquí
+                    HttpContext.Session.SetInt32("UserId", user.IdUsuario);
+                    HttpContext.Session.SetString("UserEmail", user.CorreoUsuario);
+
+                    // Redirigir a la página principal u otra página después de iniciar sesión
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    // Si no se encuentra el usuario, muestra un mensaje de error
+                    ModelState.AddModelError("", "Correo o contraseña incorrectos.");
+                }
+            }
+
+            // Si llegamos aquí, algo falló; vuelve a mostrar el formulario
+            return View(usuario);
+        }
+
+
     }
 }

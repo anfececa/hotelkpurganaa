@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VRzZ6IyoVco=",
+  "dgSpecHash": "44XJAejN528=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pipe\\source\\repos\\kpurganaa\\kpurganaa\\kpurganaa.csproj",
+  "projectFilePath": "C:\\Users\\pipe\\Source\\Repos\\anfececa\\hotelkpurganaa\\kpurganaa\\kpurganaa.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pipe\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\pipe\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

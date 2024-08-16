@@ -10818,11 +10818,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pipe\\source\\repos\\kpurganaa\\kpurganaa\\kpurganaa.csproj",
+      "projectUniqueName": "C:\\Users\\pipe\\Source\\Repos\\anfececa\\hotelkpurganaa\\kpurganaa\\kpurganaa.csproj",
       "projectName": "kpurganaa",
-      "projectPath": "C:\\Users\\pipe\\source\\repos\\kpurganaa\\kpurganaa\\kpurganaa.csproj",
+      "projectPath": "C:\\Users\\pipe\\Source\\Repos\\anfececa\\hotelkpurganaa\\kpurganaa\\kpurganaa.csproj",
       "packagesPath": "C:\\Users\\pipe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pipe\\source\\repos\\kpurganaa\\kpurganaa\\obj\\",
+      "outputPath": "C:\\Users\\pipe\\Source\\Repos\\anfececa\\hotelkpurganaa\\kpurganaa\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

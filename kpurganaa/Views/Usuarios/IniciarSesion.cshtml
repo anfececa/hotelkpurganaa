@@ -1,0 +1,30 @@
+﻿@model kpurganaa.Models.Usuario
+
+@{
+    ViewData["Title"] = "Iniciar Sesión";
+}
+
+<div class="vh-100 d-flex justify-content-center" style="background-image: url(/img/6f38d4573ea286a2.png); background-size: cover;">
+    <div class="card border-0" style="max-width: 50%; margin-top: 3.5cm; max-height: 45%; background-image: url(/img/descarga.png); background-size: cover;">
+        <div class="card-header text-center" style="background-color: burlywood;">
+            <h2>Iniciar Sesión</h2>
+        </div>
+        <form method="post" asp-action="IniciarSesion" class="row card-body m-auto" style="background-color: lightgoldenrodyellow;">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CorreoUsuario">Correo Electrónico:</label>
+                <input asp-for="CorreoUsuario" class="form-control" required />
+                <span asp-validation-for="CorreoUsuario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClaveUsuario">Contraseña:</label>
+                <input asp-for="ClaveUsuario" class="form-control" type="password" required />
+                <span asp-validation-for="ClaveUsuario" class="text-danger"></span>
+            </div>
+            <div class="card-footer text-center" style="background-color: lightgoldenrodyellow;">
+                <button type="submit" class="btn btn-primary btn-sm">Iniciar Sesión</button>
+                <a href="@Url.Action("Index", "Home")" class="btn btn-danger btn-sm">Regresar</a>
+            </div>
+        </form>
+    </div>
+</div>
