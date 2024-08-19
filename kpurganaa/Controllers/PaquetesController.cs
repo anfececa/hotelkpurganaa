@@ -6,11 +6,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using kpurganaa.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace kpurganaa.Controllers
 {
+    [Authorize(Roles = "administrador")]
     public class PaquetesController : Controller
     {
+        
         private readonly kapurganaaContext _context;
 
         public PaquetesController(kapurganaaContext context)

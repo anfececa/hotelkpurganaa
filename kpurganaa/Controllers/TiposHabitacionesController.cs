@@ -6,9 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using kpurganaa.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace kpurganaa.Controllers
 {
+    
+
     public class TiposHabitacionesController : Controller
     {
         private readonly kapurganaaContext _context;
@@ -65,7 +68,7 @@ namespace kpurganaa.Controllers
             }
             return View(tiposHabitacione);
         }
-
+        
         // GET: TiposHabitaciones/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -116,7 +119,7 @@ namespace kpurganaa.Controllers
             }
             return View(tiposHabitacione);
         }
-
+        [Authorize(Roles = "administrador")]
         // GET: TiposHabitaciones/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {

@@ -1,9 +1,11 @@
 ﻿using kpurganaa.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace kpurganaa.Controllers
 {
+    
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -12,7 +14,7 @@ namespace kpurganaa.Controllers
         {
             _logger = logger;
         }
-
+        [Authorize(Roles = "administrador,cliente")]
         public IActionResult Index()
         {
             return View();

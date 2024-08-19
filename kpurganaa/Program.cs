@@ -1,47 +1,57 @@
-    using kpurganaa.Models;
-    using Microsoft.EntityFrameworkCore;
+using kpurganaa.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
-    var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(args);
 
-    // Add services to the container.
-    builder.Services.AddControllersWithViews();
+// Add services to the container.
+builder.Services.AddControllersWithViews();
 
-    // Configurar DbContext con la cadena de conexión de la base de datos
-    builder.Services.AddDbContext<kapurganaaContext>(options =>
-        options.UseSqlServer(builder.Configuration.GetConnectionString("conexion")));
-
-    // Agregar servicio de sesión
-    builder.Services.AddSession(options =>
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(option =>
     {
-        // Opcional: Configura el tiempo de expiración de la sesión
-        options.IdleTimeout = TimeSpan.FromMinutes(30);
-        options.Cookie.HttpOnly = true;
-        options.Cookie.IsEssential = true;
+        option.LoginPath = "/usuarios/iniciarsesion";
+        option.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+        option.AccessDeniedPath = "/home/privacy";
     });
 
-    var app = builder.Build();
+// Configurar DbContext con la cadena de conexión de la base de datos
+builder.Services.AddDbContext<kapurganaaContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("conexion")));
 
-    // Configure the HTTP request pipeline.
-    if (!app.Environment.IsDevelopment())
-    {
-        app.UseExceptionHandler("/Home/Error");
-        // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-        app.UseHsts();
-    }
+// Agregar servicio de sesión
+builder.Services.AddSession(options =>
+{
+    // Opcional: Configura el tiempo de expiración de la sesión
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 
-    app.UseHttpsRedirection();
-    app.UseStaticFiles();
+var app = builder.Build();
 
-    app.UseRouting();
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
 
-    // Habilitar sesiones
-    app.UseSession();
+app.UseHttpsRedirection();
+app.UseStaticFiles();
 
-    app.UseAuthorization();
+app.UseRouting();
 
-    app.MapControllerRoute(
-        name: "default",
-        pattern: "{controller=Home}/{action=Index}/{id?}");
+// Habilitar sesiones
+app.UseSession();
 
-    app.Run();
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.Run();
 

@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\pipe\\source\\repos\\anfececa\\hotelkpurganaa\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0D5D6159-19B0-495E-AAEE-D160BCD317A0}|kpurganaa\\kpurganaa.csproj|c:\\users\\pipe\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\views\\usuarios\\iniciarsesion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0D5D6159-19B0-495E-AAEE-D160BCD317A0}|kpurganaa\\kpurganaa.csproj|solutionrelative:kpurganaa\\views\\usuarios\\iniciarsesion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0D5D6159-19B0-495E-AAEE-D160BCD317A0}|kpurganaa\\kpurganaa.csproj|c:\\users\\pipe\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0D5D6159-19B0-495E-AAEE-D160BCD317A0}|kpurganaa\\kpurganaa.csproj|solutionrelative:kpurganaa\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D5D6159-19B0-495E-AAEE-D160BCD317A0}|kpurganaa\\kpurganaa.csproj|c:\\users\\pipe\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\models\\kapurganaacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D5D6159-19B0-495E-AAEE-D160BCD317A0}|kpurganaa\\kpurganaa.csproj|solutionrelative:kpurganaa\\models\\kapurganaacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D5D6159-19B0-495E-AAEE-D160BCD317A0}|kpurganaa\\kpurganaa.csproj|c:\\users\\pipe\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D5D6159-19B0-495E-AAEE-D160BCD317A0}|kpurganaa\\kpurganaa.csproj|solutionrelative:kpurganaa\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D5D6159-19B0-495E-AAEE-D160BCD317A0}|kpurganaa\\kpurganaa.csproj|c:\\users\\pipe\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D5D6159-19B0-495E-AAEE-D160BCD317A0}|kpurganaa\\kpurganaa.csproj|solutionrelative:kpurganaa\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,50 +18,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "IniciarSesion.cshtml",
-              "DocumentMoniker": "C:\\Users\\pipe\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\Views\\Usuarios\\IniciarSesion.cshtml",
-              "RelativeDocumentMoniker": "kpurganaa\\Views\\Usuarios\\IniciarSesion.cshtml",
-              "ToolTip": "C:\\Users\\pipe\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\Views\\Usuarios\\IniciarSesion.cshtml",
-              "RelativeToolTip": "kpurganaa\\Views\\Usuarios\\IniciarSesion.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAACAAAA",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\pipe\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "kpurganaa\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\pipe\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "kpurganaa\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACgAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-16T18:35:52.653Z",
+              "WhenOpened": "2024-08-19T13:38:26.71Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "kapurganaaContext.cs",
-              "DocumentMoniker": "C:\\Users\\pipe\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\Models\\kapurganaaContext.cs",
-              "RelativeDocumentMoniker": "kpurganaa\\Models\\kapurganaaContext.cs",
-              "ToolTip": "C:\\Users\\pipe\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\Models\\kapurganaaContext.cs",
-              "RelativeToolTip": "kpurganaa\\Models\\kapurganaaContext.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAA7wCIAAAAAAAAA",
+              "Title": "UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\pipe\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\Controllers\\UsuariosController.cs",
+              "RelativeDocumentMoniker": "kpurganaa\\Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\pipe\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\Controllers\\UsuariosController.cs",
+              "RelativeToolTip": "kpurganaa\\Controllers\\UsuariosController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T18:30:21.32Z",
+              "WhenOpened": "2024-08-19T13:33:24.994Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\pipe\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\Program.cs",
-              "RelativeDocumentMoniker": "kpurganaa\\Program.cs",
-              "ToolTip": "C:\\Users\\pipe\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\Program.cs",
-              "RelativeToolTip": "kpurganaa\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T18:25:53.9Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }

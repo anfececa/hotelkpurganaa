@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\kpurganaa",
+    "\\kpurganaa\\Controllers"
   ],
-  "SelectedNode": "\\kpurganaa.sln",
+  "SelectedNode": "\\kpurganaa\\Controllers\\HomeController.cs",
   "PreviewInSolutionExplorer": false
 }

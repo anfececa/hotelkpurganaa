@@ -6,9 +6,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using kpurganaa.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
 namespace kpurganaa.Controllers
 {
+   
     public class UsuariosController : Controller
     {
         private readonly kapurganaaContext _context;
@@ -18,13 +23,14 @@ namespace kpurganaa.Controllers
             _context = context;
         }
 
+        
         // GET: Usuarios
         public async Task<IActionResult> Index()
         {
             var kapurganaaContext = _context.Usuarios.Include(u => u.IdPersonasNavigation).Include(u => u.IdRolNavigation);
             return View(await kapurganaaContext.ToListAsync());
         }
-
+        [Authorize(Roles = "administrador")]
         // GET: Usuarios/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -44,7 +50,7 @@ namespace kpurganaa.Controllers
 
             return View(usuario);
         }
-
+            
         // GET: Usuarios/Create
         public IActionResult Create()
         {
@@ -70,7 +76,7 @@ namespace kpurganaa.Controllers
             ViewData["IdRol"] = new SelectList(_context.Roles, "IdRol", "IdRol", usuario.IdRol);
             return View(usuario);
         }
-
+        [Authorize(Roles = "administrador")]
         // GET: Usuarios/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -125,7 +131,7 @@ namespace kpurganaa.Controllers
             ViewData["IdRol"] = new SelectList(_context.Roles, "IdRol", "IdRol", usuario.IdRol);
             return View(usuario);
         }
-
+        [Authorize(Roles = "administrador")]
         // GET: Usuarios/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -184,17 +190,45 @@ namespace kpurganaa.Controllers
             {
                 // Busca el usuario con el correo y contraseña proporcionados
                 var user = await _context.Usuarios
+                    .Include(u => u.IdRolNavigation) // Incluye el rol para los Claims
                     .FirstOrDefaultAsync(u => u.CorreoUsuario == usuario.CorreoUsuario && u.ClaveUsuario == usuario.ClaveUsuario);
 
                 if (user != null)
                 {
-                    // Si se encuentra el usuario, se puede establecer una sesión aquí
-                    HttpContext.Session.SetInt32("UserId", user.IdUsuario);
-                    HttpContext.Session.SetString("UserEmail", user.CorreoUsuario);
+                    // Verificar si IdRolNavigation es null
+                    var role = user.IdRolNavigation;
+                    if (role == null)
+                    {
+                        ModelState.AddModelError("", "El usuario no tiene un rol asignado.");
+                        return View(usuario);
+                    }
+                    // Crear una identidad de usuario con Claims    
+                    var claims = new List<Claim>
+                    {
+                        new Claim(ClaimTypes.Name, user.CorreoUsuario),
+                        new Claim(ClaimTypes.NameIdentifier, user.IdUsuario.ToString()),
+                        new Claim(ClaimTypes.Role, user.IdRolNavigation.Nombre) // Asumiendo que tu modelo `Role` tiene una propiedad `Nombre`
+                    };
+
+                    var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+                    // Crear el principal de usuario
+                    var authProperties = new AuthenticationProperties
+                    {
+                        // Puedes agregar propiedades adicionales aquí si es necesario
+                        IsPersistent = true, // Para mantener la sesión activa incluso después de cerrar el navegador
+                        ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(30) // Configura el tiempo de expiración de la cookie
+                    };
+
+                    // Autenticar al usuario
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+                        new ClaimsPrincipal(claimsIdentity),
+                        authProperties);
 
                     // Redirigir a la página principal u otra página después de iniciar sesión
                     return RedirectToAction("Index", "Home");
                 }
+
                 else
                 {
                     // Si no se encuentra el usuario, muestra un mensaje de error
@@ -204,6 +238,15 @@ namespace kpurganaa.Controllers
 
             // Si llegamos aquí, algo falló; vuelve a mostrar el formulario
             return View(usuario);
+
+        }
+        public async Task<IActionResult> Salir()
+        {
+            // Cierra la sesión del usuario actual
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+            // Redirige a la acción "IniciarSesion" en el controlador "Usuarios"
+            return RedirectToAction("IniciarSesion", "Usuarios");
         }
 
 

@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using kpurganaa.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace kpurganaa.Controllers
 {
+    
     public class ReservasController : Controller
     {
         private readonly kapurganaaContext _context;
@@ -70,7 +72,7 @@ namespace kpurganaa.Controllers
             ViewData["IdUsuario"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario", reserva.IdUsuario);
             return View(reserva);
         }
-
+        [Authorize(Roles = "administrador")]
         // GET: Reservas/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -125,7 +127,7 @@ namespace kpurganaa.Controllers
             ViewData["IdUsuario"] = new SelectList(_context.Usuarios, "IdUsuario", "IdUsuario", reserva.IdUsuario);
             return View(reserva);
         }
-
+        [Authorize(Roles = "administrador")]
         // GET: Reservas/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
