@@ -249,6 +249,22 @@ namespace kpurganaa.Controllers
             return RedirectToAction("IniciarSesion", "Usuarios");
         }
 
+        public IActionResult Recuperarclave()
+        {
+            return View();
+        }
+
+        public IActionResult Restablecerclave()
+        {
+            return View();
+        }
+        public IActionResult Confirmacionrestablecerclave()
+        {
+            return View();
+        }
+
+
+
 
     }
 }

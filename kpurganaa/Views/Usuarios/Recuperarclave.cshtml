@@ -1,0 +1,21 @@
+﻿@model kpurganaa.Models.Usuario
+@{
+    ViewData["Title"] = "Recuperarclave";
+}
+
+<div class="vh-100 d-flex justify-content-center" style="background-image: url(/img/6f38d4573ea286a2.png);background-size:cover">
+    <div class="card  border-0" style="max-width: 50%; margin-top:3.5cm; max-height:45%;background-image: url(/img/descarga.png);background-size:cover">
+        <div class="card-header text-center" style="background-color:burlywood">
+            <h1>@ViewData["Title"]</h1>
+        </div>
+        <form asp-action="confirmacionrestablecerclave" method="post" class="row card-body m-auto" style="background-color:lightgoldenrodyellow;">
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <div class="card-footer text-center " style="background-color:lightgoldenrodyellow;">
+                <button type="submit" class="btn btn-success btn-sm">Enviar Enlace de Recuperación</button>
+                <a href="@Url.Action("iniciarsesion", "usuarios")" class="btn btn-danger btn-sm">Cancelar </a>
+                <p>Si la dirección de correo electrónico está registrada, te enviaremos un enlace para restablecer tu contraseña.</p>
+            </div>
+        </form>
+    </div>
+</div>
