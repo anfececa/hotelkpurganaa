@@ -14,7 +14,7 @@ namespace kpurganaa.Controllers
         {
             _logger = logger;
         }
-        [Authorize(Roles = "administrador,cliente")]
+        
         public IActionResult Index()
         {
             return View();

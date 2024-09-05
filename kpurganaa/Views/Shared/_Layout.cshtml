@@ -22,7 +22,7 @@
                     @if (User.IsInRole("cliente") || User.IsInRole("administrador"))
                     {
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="habitaciones" asp-action="Index">Habitaciones</a>
                         </li>
                    
                     }
@@ -37,9 +37,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="servicios" asp-action="Index">Servicios</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="habitaciones" asp-action="Index">Habitaciones</a>
-                        </li>
+                        
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="permisoes" asp-action="Index">Permisos</a>
                         </li>
@@ -62,6 +60,9 @@
                         </li>
                        
                     }
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
                      <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="reservas" asp-action="Index">Reservas</a>
                     </li>
@@ -71,6 +72,7 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="usuarios" asp-action="Salir">Salir</a>
                     </li>
+
                    
                    
                 </ul>

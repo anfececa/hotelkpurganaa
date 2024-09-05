@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pipe\\Source\\Repos\\anfececa\\hotelkpurganaa\\kpurganaa\\kpurganaa.csproj": {}
+    "C:\\Users\\andy\\Source\\Repos\\anfececa\\hotelkpurganaa\\kpurganaa\\kpurganaa.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pipe\\Source\\Repos\\anfececa\\hotelkpurganaa\\kpurganaa\\kpurganaa.csproj": {
+    "C:\\Users\\andy\\Source\\Repos\\anfececa\\hotelkpurganaa\\kpurganaa\\kpurganaa.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pipe\\Source\\Repos\\anfececa\\hotelkpurganaa\\kpurganaa\\kpurganaa.csproj",
+        "projectUniqueName": "C:\\Users\\andy\\Source\\Repos\\anfececa\\hotelkpurganaa\\kpurganaa\\kpurganaa.csproj",
         "projectName": "kpurganaa",
-        "projectPath": "C:\\Users\\pipe\\Source\\Repos\\anfececa\\hotelkpurganaa\\kpurganaa\\kpurganaa.csproj",
-        "packagesPath": "C:\\Users\\pipe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pipe\\Source\\Repos\\anfececa\\hotelkpurganaa\\kpurganaa\\obj\\",
+        "projectPath": "C:\\Users\\andy\\Source\\Repos\\anfececa\\hotelkpurganaa\\kpurganaa\\kpurganaa.csproj",
+        "packagesPath": "C:\\Users\\andy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\andy\\Source\\Repos\\anfececa\\hotelkpurganaa\\kpurganaa\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\andy\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -1,10 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\pipe\\source\\repos\\anfececa\\hotelkpurganaa\\",
+  "WorkspaceRootPath": "C:\\Users\\andy\\source\\repos\\anfececa\\hotelkpurganaa\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0D5D6159-19B0-495E-AAEE-D160BCD317A0}|kpurganaa\\kpurganaa.csproj|c:\\users\\pipe\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{0D5D6159-19B0-495E-AAEE-D160BCD317A0}|kpurganaa\\kpurganaa.csproj|c:\\users\\andy\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{0D5D6159-19B0-495E-AAEE-D160BCD317A0}|kpurganaa\\kpurganaa.csproj|solutionrelative:kpurganaa\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D5D6159-19B0-495E-AAEE-D160BCD317A0}|kpurganaa\\kpurganaa.csproj|c:\\users\\andy\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0D5D6159-19B0-495E-AAEE-D160BCD317A0}|kpurganaa\\kpurganaa.csproj|solutionrelative:kpurganaa\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D5D6159-19B0-495E-AAEE-D160BCD317A0}|kpurganaa\\kpurganaa.csproj|c:\\users\\andy\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\views\\usuarios\\iniciarsesion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0D5D6159-19B0-495E-AAEE-D160BCD317A0}|kpurganaa\\kpurganaa.csproj|solutionrelative:kpurganaa\\views\\usuarios\\iniciarsesion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -20,13 +28,43 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\pipe\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\andy\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "kpurganaa\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\pipe\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "kpurganaa\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAD4AAAAXAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\andy\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\Views\\Shared\\_Layout.cshtml*",
+              "RelativeToolTip": "kpurganaa\\Views\\Shared\\_Layout.cshtml*",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABkAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-29T11:25:00.71Z",
+              "WhenOpened": "2024-08-31T14:25:08.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IniciarSesion.cshtml",
+              "DocumentMoniker": "C:\\Users\\andy\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\Views\\Usuarios\\IniciarSesion.cshtml",
+              "RelativeDocumentMoniker": "kpurganaa\\Views\\Usuarios\\IniciarSesion.cshtml",
+              "ToolTip": "C:\\Users\\andy\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\Views\\Usuarios\\IniciarSesion.cshtml",
+              "RelativeToolTip": "kpurganaa\\Views\\Usuarios\\IniciarSesion.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-31T14:23:06.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\andy\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "kpurganaa\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\andy\\source\\repos\\anfececa\\hotelkpurganaa\\kpurganaa\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "kpurganaa\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAADIAAAAAAAAAAAAYwEAAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-31T14:06:29.174Z",
               "EditorCaption": ""
             }
           ]
